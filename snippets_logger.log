@@ -1,0 +1,57 @@
+[DEBUG|selector_events|L54] 2024-09-10T16:39:15+0300: Using selector: SelectSelector
+[DEBUG|selector_events|L54] 2024-09-10T16:40:08+0300: Using selector: SelectSelector
+[DEBUG|selector_events|L54] 2024-09-10T16:40:28+0300: Using selector: SelectSelector
+[DEBUG|selector_events|L54] 2024-09-10T16:40:40+0300: Using selector: SelectSelector
+[DEBUG|selector_events|L54] 2024-09-10T16:43:20+0300: Using selector: SelectSelector
+[DEBUG|selector_events|L54] 2024-09-10T16:46:08+0300: Using selector: SelectSelector
+[DEBUG|selector_events|L54] 2024-09-10T16:46:10+0300: Using selector: SelectSelector
+[INFO|h11_impl|L476] 2024-09-10T16:46:13+0300: 127.0.0.1:56014 - "GET /ping HTTP/1.1" 500
+[ERROR|h11_impl|L411] 2024-09-10T16:46:13+0300: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 406, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yulia.karabasova\AppData\Local\pypoetry\Cache\virtualenvs\codeshare-sf-42nOBM3_-py3.11\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PycharmProjects\Skillfactory\codeshare_sf\main.py", line 20, in ping
+    a = 1 / 0
+        ~~^~~
+ZeroDivisionError: division by zero
+[INFO|h11_impl|L476] 2024-09-10T16:46:26+0300: 127.0.0.1:56015 - "GET /user/get_code/%7Bsnippet_uuid%7D?code_uuid=67c63170-bd82-4a4e-ac1b-9cd1bf3770e6 HTTP/1.1" 404
+[DEBUG|selector_events|L54] 2024-09-10T16:46:27+0300: Using selector: SelectSelector
